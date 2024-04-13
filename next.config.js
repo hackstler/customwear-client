@@ -15,6 +15,10 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
+        hostname: "customwear-client.vercel.app",
+      },
+      {
+        protocol: "https",
         hostname: "cdnbigbuy.com",
       },
       {
