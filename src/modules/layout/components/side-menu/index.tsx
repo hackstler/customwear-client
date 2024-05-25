@@ -11,10 +11,10 @@ import CountrySelect from "../country-select"
 
 const SideMenuItems = {
   Home: "/",
-  Store: "/store",
-  Search: "/search",
-  Account: "/account",
-  Cart: "/cart",
+  Productos: "/store",
+  Buscar: "/search",
+  Cuenta: "/account",
+  Carrito: "/cart",
 }
 
 const SideMenu = ({ regions }: { regions: Region[] | null }) => {

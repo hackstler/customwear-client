@@ -35,14 +35,14 @@ export default async function Nav() {
                   href="/search"
                   scroll={false}
                 >
-                  Search
+                  Buscar
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/account"
               >
-                Account
+                Cuenta
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -51,7 +51,7 @@ export default async function Nav() {
                   className="hover:text-ui-fg-base flex gap-2"
                   href="/cart"
                 >
-                  Cart (0)
+                  Carrito (0)
                 </LocalizedClientLink>
               }
             >

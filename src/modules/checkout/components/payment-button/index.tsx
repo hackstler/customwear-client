@@ -34,7 +34,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ cart }) => {
     case "paypal":
       return <PayPalPaymentButton notReady={notReady} cart={cart} />
     default:
-      return <Button disabled>Select a payment method</Button>
+      return <Button disabled>Seleccione un método de pago</Button>
   }
 }
 
@@ -127,7 +127,7 @@ const StripePaymentButton = ({
         size="large"
         isLoading={submitting}
       >
-        Place order
+        Realizar pedido
       </Button>
       <ErrorMessage error={errorMessage} />
     </>
@@ -218,7 +218,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         onClick={handlePayment}
         size="large"
       >
-        Place order
+        Realizar pedido
       </Button>
       <ErrorMessage error={errorMessage} />
     </>
