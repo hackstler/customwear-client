@@ -72,7 +72,7 @@ const AddAddress = ({ region }: { region: Region }) => {
                 />
               </div>
               <Input
-                label="Company"
+                label="Empresa"
                 name="company"
                 autoComplete="organization"
               />

@@ -25,7 +25,7 @@ export default async function Profile() {
   return (
     <div className="w-full">
       <div className="mb-8 flex flex-col gap-y-4">
-        <h1 className="text-2xl-semi">Profile</h1>
+        <h1 className="text-2xl-semi">Perfil</h1>
         <p className="text-base-regular">
           Vea y actualice la información de su perfil, incluido su nombre, correo electrónico,
           y número de teléfono. También puede actualizar su dirección de facturación o cambiar
