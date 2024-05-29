@@ -1,23 +1,28 @@
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+    <div className="relative min-h-screen h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+      <Image
+        src="https://storage.googleapis.com/afterbootcamp/customwear/DALL%C2%B7E%202024-05-28%2015.20.12%20-%20A%20minimalist%20and%20underground%20banner%20for%20an%20online%20custom%20clothing%20store%20named%20'Customwear'.%20The%20banner%20should%20convey%20personality%20and%20self-esteem%20while.webp"
+        alt="Customwear Hero"
+        fill
+        objectFit="cover"
+        quality={100}
+        className="absolute inset-0"
+      />
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
         <span>
           <Heading
             level="h1"
             className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Customwear Coming soon
-          </Heading>
+          ></Heading>
           <Heading
             level="h2"
             className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Powered by Medusa and Next.js
-          </Heading>
+          ></Heading>
         </span>
       </div>
     </div>

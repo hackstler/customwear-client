@@ -23,6 +23,10 @@ const nextConfig = withStoreConfig({
       },
       {
         protocol: "https",
+        hostname: "storage.googleapis.com",
+      },
+      {
+        protocol: "https",
         hostname: "hackstler.com",
       },
       {

@@ -34,6 +34,9 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        "pink-pastel":"#f8c8c8",
+        "blue-pastel":"#bcdcdc",
+        "gradient-background": "linear-gradient(90deg, #f8c8c8 0%, #bcdcdc 100%)",
       },
       borderRadius: {
         none: "0px",
