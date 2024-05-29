@@ -8,9 +8,26 @@ import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Customwear Store",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Be yourself, be unique. Customwear is a custom clothing store that allows you to express yourself through your clothes. We offer a wide range of products that you can customize to your liking. From t-shirts to hoodies, we have everything you need to create your own style.",
+  keywords:
+    "customwear, custom clothing, personalized clothing, unique style, custom t-shirts, custom hoodies",
+  openGraph: {
+    title: "Customwear Store",
+    description:
+      "Be yourself, be unique. Customwear is a custom clothing store that allows you to express yourself through your clothes. We offer a wide range of products that you can customize to your liking. From t-shirts to hoodies, we have everything you need to create your own style.",
+    url: "https://app.customwear.es",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 800,
+        height: 600,
+        alt: "Customwear Store",
+      },
+    ],
+    siteName: "Customwear Store",
+  },
 }
 
 const getCollectionsWithProducts = cache(
