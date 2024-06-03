@@ -2,6 +2,7 @@ const path = require("path")
 
 module.exports = {
   darkMode: "class",
+  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   presets: [require("@medusajs/ui-preset")],
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",

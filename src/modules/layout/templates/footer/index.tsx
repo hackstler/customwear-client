@@ -12,7 +12,7 @@ export default async function Footer() {
   return (
     <footer className=" w-full bg-pink-pastel">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-10">
+        <div className="flex flex-col xsmall:flex-col items-center justify-between">
           <div>
             <Image
               src="https://storage.googleapis.com/afterbootcamp/customwear/openart-image_bJbJkZSq_1717017953113_raw.png"
@@ -134,11 +134,10 @@ export default async function Footer() {
             </div>
           </div> */}
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex w-full mb-16 justify-center text-ui-fg-muted">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Customwear Store. All rights reserved.
           </Text>
-          <MedusaCTA />
         </div>
       </div>
     </footer>
