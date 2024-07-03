@@ -1,10 +1,54 @@
 "use client"
+import React, { Suspense, useState } from "react"
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
 import Image from "next/image"
 import useMediaQuery from "../../../../app/hooks/useMediaQuery"
 
-const Hero = () => {
+interface ImageWithBlurProps {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  quality?: number
+  objectFit: "cover" | "contain" | "fill" | "none" | "scale-down"
+  className?: string
+  fill?: boolean
+}
+
+const ImageWithBlur: React.FC<ImageWithBlurProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  quality,
+  objectFit,
+  className,
+  fill,
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  return (
+    <div
+      className={`${className} ${isLoaded ? "" : "blur-md"}`}
+      onBlur={() => setIsLoaded(true)}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        quality={quality}
+        objectFit={objectFit}
+        className={className}
+        onLoad={() => setIsLoaded(true)}
+        fill={fill}
+      />
+    </div>
+  )
+}
+
+const Hero: React.FC = () => {
   const isMobile = useMediaQuery("(max-width: 768px)")
 
   return (
@@ -14,26 +58,30 @@ const Hero = () => {
       }`}
     >
       <div className="relative w-full h-full">
-        {isMobile ? (
-          <Image
-            src="https://storage.googleapis.com/afterbootcamp/customwear/resized_customwear_banner_mobile.webp"
-            alt="Customwear Banner Mobile"
-            width={720}
-            height={1080}
-            quality={100}
-            objectFit="cover"
-            className="absolute inset-0"
-          />
-        ) : (
-          <Image
-            src="https://storage.googleapis.com/afterbootcamp/customwear/DALL%C2%B7E%202024-05-28%2015.20.12%20-%20A%20minimalist%20and%20underground%20banner%20for%20an%20online%20custom%20clothing%20store%20named%20'Customwear'.%20The%20banner%20should%20convey%20personality%20and%20self-esteem%20while.webp"
-            alt="Customwear Banner Desktop"
-            fill
-            objectFit="cover"
-            quality={100}
-            className="absolute inset-0"
-          />
-        )}
+        <Suspense
+          fallback={<div className="absolute inset-0 bg-gray-200"></div>}
+        >
+          {isMobile ? (
+            <ImageWithBlur
+              src="https://storage.googleapis.com/afterbootcamp/customwear/resized_customwear_banner_mobile.webp"
+              alt="Customwear Banner Mobile"
+              width={720}
+              height={1080}
+              quality={100}
+              objectFit="cover"
+              className="absolute inset-0"
+            />
+          ) : (
+            <ImageWithBlur
+              src="https://storage.googleapis.com/afterbootcamp/customwear/DALL%C2%B7E%202024-05-28%2015.20.12%20-%20A%20minimalist%20and%20underground%20banner%20for%20an%20online%20custom%20clothing%20store%20named%20'Customwear'.%20The%20banner%20should%20convey%20personality%20and%20self-esteem%20while.webp"
+              alt="Customwear Banner Desktop"
+              fill
+              quality={100}
+              objectFit="cover"
+              className="absolute inset-0"
+            />
+          )}
+        </Suspense>
       </div>
 
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
