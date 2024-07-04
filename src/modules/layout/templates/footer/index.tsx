@@ -134,7 +134,7 @@ export default async function Footer() {
             </div>
           </div> */}
         </div>
-        <div className="flex w-full mb-16 justify-center text-ui-fg-muted">
+        <div className="flex w-full mb-16 h-full justify-center text-ui-fg-muted">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Customwear Store. All rights reserved.
           </Text>
