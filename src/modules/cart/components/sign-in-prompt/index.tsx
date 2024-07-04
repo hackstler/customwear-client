@@ -14,7 +14,7 @@ const SignInPrompt = () => {
       </div>
       <div>
         <LocalizedClientLink href="/account">
-          <Button variant="secondary" className="h-10">
+          <Button variant="secondary" className="w-full mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">
             Entrar
           </Button>
         </LocalizedClientLink>

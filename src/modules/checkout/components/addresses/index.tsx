@@ -93,7 +93,7 @@ const Addresses = ({
                 <BillingAddress cart={cart} countryCode={countryCode} />
               </div>
             )}
-            <SubmitButton className="mt-6">Continuar con el pedido</SubmitButton>
+            <SubmitButton className="w-full mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">Continuar con el pedido</SubmitButton>
             <ErrorMessage error={message} />
           </div>
         </form>

@@ -39,7 +39,7 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
               </span>
             </Text>
             <Text>
-              stado de pago:{" "}
+              Estado de pago:{" "}
               <span className="text-ui-fg-subtle ">
                 {formatStatus(order.payment_status)}
               </span>
