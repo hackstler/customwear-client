@@ -103,7 +103,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <span>
                     {variant
                       ? Object.values(options).join(" / ")
-                      : "Select Options"}
+                      : "Modelos"}
                   </span>
                   <ChevronDown />
                 </div>
@@ -111,14 +111,14 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               <Button
                 onClick={handleAddToCart}
                 disabled={!inStock || !variant}
-                className="w-full"
+                className="w-full mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800"
                 isLoading={isAdding}
               >
                 {!variant
                   ? "Select variant"
                   : !inStock
-                  ? "Out of stock"
-                  : "Add to cart"}
+                  ? "Fuera de Stock"
+                  : "Añadir al carrito"}
               </Button>
             </div>
           </div>

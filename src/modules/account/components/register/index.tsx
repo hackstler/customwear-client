@@ -73,7 +73,7 @@ const Register = ({ setCurrentView }: Props) => {
           </LocalizedClientLink>
           .
         </span>
-        <SubmitButton className="w-full mt-6">Registrarse</SubmitButton>
+        <SubmitButton className="w-full mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">Registrarse</SubmitButton>
       </form>
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
         ¿Ya estas registrado?{" "}

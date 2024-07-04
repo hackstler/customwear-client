@@ -135,7 +135,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                     type="text"
                     autoFocus={false}
                   />
-                  <SubmitButton variant="secondary">Aplicar</SubmitButton>
+                  <SubmitButton variant="secondary" className="mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">Aplicar</SubmitButton>
                 </div>
                 <ErrorMessage error={message} />
               </>

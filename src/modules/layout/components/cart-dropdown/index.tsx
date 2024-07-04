@@ -163,7 +163,7 @@ const CartDropdown = ({
                     </span>
                   </div>
                   <LocalizedClientLink href="/cart" passHref>
-                    <Button className="w-full" size="large">
+                    <Button className="w-full mt-6 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800" size="large">
                       Ir al carrito
                     </Button>
                   </LocalizedClientLink>
