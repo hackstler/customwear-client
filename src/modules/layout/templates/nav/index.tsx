@@ -19,7 +19,7 @@ export default async function Nav() {
           </div>
 
           <div className="flex items-center h-full">
-            <LocalizedClientLink href="/">CUSTOMWEAR</LocalizedClientLink>
+            <LocalizedClientLink href="/" className="font-sans text-lg hover:text-xl">CUSTOMWEAR</LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
