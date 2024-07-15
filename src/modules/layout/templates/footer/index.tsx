@@ -1,14 +1,14 @@
-import { Text } from "@medusajs/ui";
-import { getCategoriesList, getCollectionsList } from "@lib/data";
-import Image from "next/image";
+import { Text } from "@medusajs/ui"
+import { getCategoriesList, getCollectionsList } from "@lib/data"
+import Image from "next/image"
 
 export default async function Footer() {
-  const { collections } = await getCollectionsList(0, 6);
-  const { product_categories } = await getCategoriesList(0, 6);
+  const { collections } = await getCollectionsList(0, 6)
+  const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="w-full bg-pink-pastel" style={{marginTop:"75vh", marginBottom:"0"}}>
-      <div className="content-container flex flex-col items-center w-full" >
+    <footer className="w-full bg-pink-pastel">
+      <div className="content-container flex flex-col items-center w-full min-h-full">
         <div className="flex flex-col items-center justify-center w-full sm:flex-row sm:justify-between sm:items-center">
           <div className="flex w-full justify-center">
             <Image
@@ -28,5 +28,5 @@ export default async function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
