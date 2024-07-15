@@ -173,7 +173,7 @@ export async function setShippingMethod(shippingMethodId: string) {
 export async function setPaymentMethod(providerId: string) {
   const cartId = cookies().get("_medusa_cart_id")?.value
 
-  if (!cartId) throw new Error("No cartId cookie found")
+   if (!cartId) throw new Error("No cartId cookie found")
 
   try {
     const cart = await setPaymentSession({ cartId, providerId })

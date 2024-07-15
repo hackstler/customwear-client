@@ -7,8 +7,8 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="w-full bg-pink-pastel">
-      <div className="content-container flex flex-col items-center w-full min-h-full">
+    <footer className="w-full bg-pink-pastel h-full">
+      <div className="content-container flex flex-col items-center w-full">
         <div className="flex flex-col items-center justify-center w-full sm:flex-row sm:justify-between sm:items-center">
           <div className="flex w-full justify-center">
             <Image

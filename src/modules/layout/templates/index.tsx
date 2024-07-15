@@ -9,7 +9,7 @@ const Layout: React.FC<{
   return (
     <div className="flex flex-col min-h-screen">
       <Nav />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow min-h-[calc(100vh-200px)] md:min-h-[calc(100vh-400px)]">{children}</main>
       <Footer />
     </div>
   )
